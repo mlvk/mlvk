@@ -1,0 +1,42 @@
+{{#slide-container as |sc|}}
+  {{sc.slide type="slides/landing-slide"}}
+
+  {{#sc.slide type="slides/image-title-slide"
+      as |slide|}}
+        {{slide.title
+            text="Raw Wrap say hello to Fresh!"}}
+        {{slide.imgix
+            image="images/wrawp-open-3-line-1-v3.jpg"
+            fpX=0.5
+            fpY=0.55}}
+  {{/sc.slide}}
+
+  {{sc.slide type="slides/intro-slide"}}
+
+  {{sc.slide type="slides/problem-slide"}}
+
+  {{sc.slide type="slides/solution-slide"}}
+
+  {{#sc.slide type="slides/image-title-slide"
+      as |slide|}}
+        {{slide.imgix
+            image="images/wrawp-open-3-line-1-v3.jpg"
+            fpX=0.67
+            fpY=0.55}}
+  {{/sc.slide}}
+
+  {{#sc.slide type="slides/image-title-slide"
+      as |slide|}}
+        {{slide.title
+            color='purple'
+            position="items-start justify-start"
+            text="Product Details"}}
+
+        {{slide.imgix
+            image="images/127.jpg"
+            fpX=0.67
+            fpY=0.55}}
+  {{/sc.slide}}
+
+  {{sc.slide type="slides/spec-sheet-slide"}}
+{{/slide-container}}

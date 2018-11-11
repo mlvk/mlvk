@@ -1,0 +1,13 @@
+<div class="h-screen flex flex-col items-center opacity-0 fade-in relative">
+  <div class="flex-1 flex w-full">
+    {{yield (hash
+              imgix=(component 'imgix-image'
+                        fit="crop"
+                        crop="focalpoint"
+                        loadHandler=(action "imageReady")
+                        shouldPrepare=shouldPrepare)
+              title=(component 'ui/pinned-title'
+                        color='blue'
+                        position="items-center justify-center"))}}
+  </div>
+</div>

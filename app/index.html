@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MLVK</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <script src='https://content.jwplatform.com/libraries/0BmBHH36.js'></script>
+     <script>jwplayer.key='aRfPRinp93a1YaLEPKWn6GInWms1dmVqSjJRVEp2TlRGMlEzQldTbGhZUVU0MFpYSnYn';</script>
+
+    {{content-for "head"}}
+
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/mlvk.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.js"></script>
+    <script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/mlvk.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: [
+            'Trocchi',
+            'Montserrat:400,800',
+            'Josefin Slab:400i, 400, 600',
+            'Raleway: 400',
+            'Material Icons'
+          ]
+        }
+      });
+    </script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

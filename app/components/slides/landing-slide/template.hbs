@@ -1,0 +1,46 @@
+<div class="min-h-screen flex flex-col items-center justify-center relative">
+    <div class="flex flex-col items-center w-full py-12">
+      <div class="flex-1 flex w-full h-48">
+        {{imgix-image
+            image="identity/mlvk/logo-circle.png"
+            fit='clamp'
+            props="mono=99000000"
+            loadHandler=(action "logoReady")
+            shouldPrepare=shouldPrepare}}
+      </div>
+      <p class="text-3xl my-2 presenting">&</p>
+
+      <div class="flex-1 flex w-full h-24">
+        {{imgix-image
+            image="identity/wrawp/logo-main.png"
+            fit='clamp'
+            props="mono=99000000"
+            loadHandler=(action "logoReady")
+            shouldPrepare=shouldPrepare}}
+      </div>
+
+      <h2
+      class="text-center
+            presenting
+            my-8
+            lg:text-3xl
+            md:text-3xl
+            z-10
+            text-grey-darkest">Present</h2>
+
+      <h1
+      class="text-center
+            copy
+            my-8
+            max-w-lg
+            lg:text-5xl
+            md:text-3xl
+            text-grey-darkest">A new line of raw wraps for Keto, Paleo, Vegan</h1>
+    </div>
+
+    <div class="my-12">
+      {{ui/generic-button
+          msg="Click here to get started"
+          action=(action "fakeSound")}}
+    </div>
+</div>

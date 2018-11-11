@@ -1,0 +1,147 @@
+<div class="flex flex-col md:flex-row">
+    <div class="flex-1">
+      {{#cards/product-card
+          name="Smokey BBQ Wrap - Double"
+          description="Flourless Veggie tortilla w/Smokey Almond Veggie Burger, Sun-dried Tomato Cashew Cheese and Creamy Ranch Dressing"
+          code="R-018"
+          upc="028672747818"
+          msrp="$11.99"
+          shelflife="6 + 1(delivery)"
+          as |card|}}
+
+        {{card.ingredientsCard title="Sauce" data=bbqDoubleSauce}}
+        {{card.ingredientsCard title="Wrap" data=bbqDoubleWrap}}
+
+        {{card.nutritionLabel title="Sauce" data=bbqDoubleSauce}}
+        {{card.nutritionLabel title="Wrap" data=bbqDoubleWrap}}
+        {{card.imgix
+            image="images/3-up-box-tea-1.jpg"
+            fpX=0.36
+            fpY=0.47
+            shouldPrepare=shouldPrepare
+          }}
+      {{/cards/product-card}}
+    </div>
+
+    <div class="flex-1">
+      {{#cards/product-card
+          name="Pepita Pesto Wrap - Double"
+          description="Flourless Veggie tortilla w/Pepita Pesto, Italian Sunseed Sausage and Sunflower Lemon Date Dressing"
+          code="R-020"
+          upc="028672747832"
+          msrp="$11.99"
+          shelflife="6 + 1(delivery)"
+          as |card|}}
+
+        {{card.ingredientsCard title="Sauce" data=pestoDoubleSauce}}
+        {{card.ingredientsCard title="Wrap" data=pestoDoubleWrap}}
+
+        {{card.nutritionLabel title="Sauce" data=pestoDoubleSauce}}
+        {{card.nutritionLabel title="Wrap" data=pestoDoubleWrap}}
+        {{card.imgix
+            image="images/wrawp-cut-on-wood-empty-L.jpg"
+            fpX=0.6
+            fpY=0.5
+            shouldPrepare=shouldPrepare
+          }}
+      {{/cards/product-card}}
+    </div>
+
+    <div class="flex-1">
+      {{#cards/product-card
+            name="Sunseed Chorizo Wrap - Double"
+            description="Flourless Veggie tortilla w/Sunseed Chorizo, Mexican Cheese and Sweet & Spicy Chipotle Dressing"
+            code="R-022"
+            upc="028672747528"
+            msrp="$11.99"
+            shelflife="6 + 1(delivery)"
+          as |card|}}
+
+        {{card.ingredientsCard title="Sauce" data=chorizoDoubleSauce}}
+        {{card.ingredientsCard title="Wrap" data=chorizoDoubleWrap}}
+
+        {{card.nutritionLabel title="Sauce" data=chorizoDoubleSauce}}
+        {{card.nutritionLabel title="Wrap" data=chorizoDoubleWrap}}
+        {{card.imgix
+            image="images/wrawp-open-3-line-1-v4.jpg"
+            fpX=0.55
+            fpY=0.4
+            shouldPrepare=shouldPrepare
+          }}
+      {{/cards/product-card}}
+    </div>
+</div>
+
+<div class="flex flex-col md:flex-row">
+    <div class="flex-1">
+      {{#cards/product-card
+          name="Smokey BBQ Wrap - Single"
+          description="Flourless Veggie tortilla w/Smokey Almond Veggie Burger, Sun-dried Tomato Cashew Cheese and Creamy Ranch Dressing"
+          code="R-019"
+          upc="028672747825"
+          msrp="$6.99"
+          shelflife="6 + 1(delivery)"
+          as |card|}}
+
+        {{card.ingredientsCard title="Sauce" data=bbqSingleSauce}}
+        {{card.ingredientsCard title="Wrap" data=bbqSingleWrap}}
+
+        {{card.nutritionLabel title="Sauce" data=bbqSingleSauce}}
+        {{card.nutritionLabel title="Wrap" data=bbqSingleWrap}}
+        {{card.imgix
+            image="images/wrawp-chorizo-open-box-dot-base.jpg"
+            fpX=0.3
+            fpY=0.7
+            shouldPrepare=shouldPrepare
+          }}
+      {{/cards/product-card}}
+    </div>
+
+    <div class="flex-1">
+      {{#cards/product-card
+          name="Pepita Pesto Wrap - Single"
+          description="Flourless Veggie tortilla w/Pepita Pesto, Italian Sunseed Sausage and Sunflower Lemon Date Dressing"
+          code="R-021"
+          upc="028672747511"
+          msrp="$6.99"
+          shelflife="6 + 1(delivery)"
+          as |card|}}
+
+        {{card.ingredientsCard title="Sauce" data=pestoSingleSauce}}
+        {{card.ingredientsCard title="Wrap" data=pestoSingleWrap}}
+
+        {{card.nutritionLabel title="Sauce" data=pestoSingleSauce}}
+        {{card.nutritionLabel title="Wrap" data=pestoSingleWrap}}
+        {{card.imgix
+            image="images/pesto-box-az-arm-book-tea4.jpg"
+            fpX=0.5
+            fpY=0.38
+            shouldPrepare=shouldPrepare
+          }}
+      {{/cards/product-card}}
+    </div>
+
+    <div class="flex-1">
+      {{#cards/product-card
+          name="Sunseed Chorizo Wrap - Single"
+          description="Flourless Veggie tortilla w/Sunseed Chorizo, Mexican Cheese and Sweet & Spicy Chipotle Dressing"
+          code="R-023"
+          upc="028672747535"
+          msrp="$6.99"
+          shelflife="6 + 1(delivery)"
+          as |card|}}
+
+        {{card.ingredientsCard title="Sauce" data=chorizoSingleSauce}}
+        {{card.ingredientsCard title="Wrap" data=chorizoSingleWrap}}
+
+        {{card.nutritionLabel title="Sauce" data=chorizoSingleSauce}}
+        {{card.nutritionLabel title="Wrap" data=chorizoSingleWrap}}
+        {{card.imgix
+            image="images/cu-bbq-box-2.jpg"
+            fpX=0.55
+            fpY=0.4
+            shouldPrepare=shouldPrepare
+          }}
+      {{/cards/product-card}}
+    </div>
+</div>

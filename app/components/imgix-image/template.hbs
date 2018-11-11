@@ -1,0 +1,6 @@
+{{#if load}}
+  <img onload={{action "onLoadHandler"}}
+      alt="{{alt}}"
+      srcset="{{url}} 1x, {{url}}&dpr=2 2x, {{url}}&dpr=3 3x"
+      src="{{url}}">
+{{/if}}

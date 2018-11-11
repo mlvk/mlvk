@@ -1,0 +1,94 @@
+<div class="shadow bg-grey-lightest w-full text-grey-darkest">
+  <div class="p-4">
+    <div class="">
+      <div class="flex item-center justify-between">
+        <h2 class="text-2xl font-bold">{{name}}</h2>
+        <div class="w-6 h-6">
+          {{imgix-image
+              image="identity/mlvk/flower.png"
+              fit='clamp'
+              props="mono=99000000"
+              shouldPrepare=true}}
+        </div>
+      </div>
+      <div class="border-b border-dashed my-4"></div>
+      <h4 class="italic mb-4">{{description}}</h4>
+
+      <div class="my-6">
+        <div class="flex my-2 justify-between border-b border-dashed">
+          <p class="text-2xl">Item Code</p>
+          <p class="text-2xl">{{code}}</p>
+        </div>
+        <div class="flex my-2 justify-between border-b border-dashed">
+          <p class="text-2xl">Item UPC</p>
+          <p class="text-2xl">{{upc}}</p>
+        </div>
+        <div class="flex my-2 justify-between border-b border-dashed">
+          <p class="text-2xl">MSRP</p>
+          <p class="text-2xl">{{msrp}}</p>
+        </div>
+        <div class="flex my-2 justify-between border-b border-dashed">
+          <p class="text-2xl">Shelf life</p>
+          <p class="text-2xl">{{shelflife}}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="h-64 w-full">
+      {{yield (hash
+                imgix=(component "imgix-image"
+                        image=iamge
+                        fit='crop'))}}
+    </div>
+
+    <div class="my-6">
+
+      {{#cp-panel as |panel|}}
+        {{#panel.toggle}}
+          <button class="btn btn-blue w-full">
+            <div class="flex items-center">
+              <p class="">
+                Ingredients
+              </p>
+              <i class="material-icons">{{if panel.isOpen "expand_less" "expand_more"}}</i>
+            </div>
+          </button>
+
+        {{/panel.toggle}}
+
+        {{#panel.body}}
+          <div class="my-4">
+            {{yield (hash
+                      ingredientsCard=(component 'cards/ingredients-card'))}}
+          </div>
+        {{/panel.body}}
+      {{/cp-panel}}
+    </div>
+    <div class="my-6">
+
+      {{#cp-panel as |panel|}}
+        {{#panel.toggle}}
+          <button class="btn btn-blue w-full">
+            <div class="flex items-center">
+              <p class="">
+                Nutrition Info
+              </p>
+              <i class="material-icons">{{if panel.isOpen "keyboard_arrow_up" "keyboard_arrow_down"}}</i>
+            </div>
+          </button>
+
+        {{/panel.toggle}}
+
+        {{#panel.body}}
+          <div class="my-4">
+            {{yield (hash
+                      nutritionLabel=(component 'cards/nutrition-card'))}}
+          </div>
+        {{/panel.body}}
+      {{/cp-panel}}
+    </div>
+  </div>
+
+
+</div>

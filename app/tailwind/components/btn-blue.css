@@ -1,0 +1,11 @@
+.btn-blue {
+  @apply bg-grey-lightest text-grey-darkest border border-blue;
+}
+
+.btn {
+  @apply flex items-baseline justify-center;
+  @apply py-2;
+  @apply px-4;
+  @apply rounded-sm;
+  @apply cursor-pointer;
+}
