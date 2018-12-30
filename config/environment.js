@@ -24,6 +24,10 @@ module.exports = function(environment) {
       injectionFactories : [ 'view', 'component']
     },
 
+    jwplayer: {
+      key: 'aRfPRinp93a1YaLEPKWn6GInWms1dmVqSjJRVEp2TlRGMlEzQldTbGhZUVU0MFpYSnYn'
+    },
+
     APP: {
 
     }

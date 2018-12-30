@@ -1,5 +1,5 @@
 {{#slide-container as |sc|}}
-  {{sc.slide type="slides/landing-slide"}}
+  {{!-- {{sc.slide type="slides/landing-slide"}} --}}
 
   {{#sc.slide type="slides/image-title-slide"
       as |slide|}}
@@ -11,8 +11,14 @@
             fpY=0.55}}
   {{/sc.slide}}
 
-  {{sc.slide type="slides/intro-slide"}}
+  {{sc.slide
+    type="slides/video-slide"
+    image="MKWypSCo-1920.jpg"
+    mediaId="5SdIWDO8"
+    file="MKWypSCo-thOJELFu.mp4"
+  }}
 
+  {{!--
   {{sc.slide type="slides/problem-slide"}}
 
   {{sc.slide type="slides/solution-slide"}}
@@ -38,5 +44,5 @@
             fpY=0.55}}
   {{/sc.slide}}
 
-  {{sc.slide type="slides/spec-sheet-slide"}}
+  {{sc.slide type="slides/spec-sheet-slide"}} --}}
 {{/slide-container}}
