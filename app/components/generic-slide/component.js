@@ -43,12 +43,23 @@ export default class GenericSlideComponent extends Component{
     //Override
   }
 
+  animateOnce() {
+    //Override
+  }
+
   pause() {
     //Override
   }
 
   nestSlide() {
     this.get('slideMgr').moveToNextSlide();
+  }
+
+  _animateOnce() {
+    if (!this.get('animatedOnce')) {
+      this.set('animatedOnce', true);
+      this.animateOnce();
+    }
   }
 
   @restartableTask({maxConcurrency: 1})
@@ -84,6 +95,7 @@ export default class GenericSlideComponent extends Component{
   _processReadinessChanged() {
     if(this.isReady() && this.get('active')) {
       this._animate.perform();
+      this._animateOnce();
     }
   }
 
@@ -94,7 +106,6 @@ export default class GenericSlideComponent extends Component{
   }
 
   prepare() {
-    console.log("Prepare Slide");
     if(!this.get('shouldPrepare')) {
       this.set('shouldPrepare', true);
     }

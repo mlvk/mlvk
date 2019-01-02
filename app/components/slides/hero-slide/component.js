@@ -4,10 +4,17 @@ import { action } from '@ember-decorators/object';
 import { attribute } from '@ember-decorators/component';
 import { notEmpty } from '@ember-decorators/object/computed';
 
-export default class SlidesImageTitleSlideComponent extends GenericSlide {
+export default class SlidesHeroSlideComponent extends GenericSlide {
 
-  animate() {
-    TweenMax.to(this.buildSelector('.fade-in'), 1, {opacity:1});
+  animateOnce() {
+    TweenMax.to(this.buildSelector('.fade-slide-in'), 1, {
+      startAt: {
+        x:"50px",
+        opacity:0
+      },
+      opacity:1,
+      x: 0
+    });
   }
 
   @notEmpty('text') hasText;

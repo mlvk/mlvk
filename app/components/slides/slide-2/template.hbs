@@ -1,0 +1,15 @@
+<div class="h-screen flex">
+  <div class="w-1/3">
+    <p>Hello</p>
+  </div>
+  <div class="w-2/3 flex image-wrapper">
+    <div class="image-container opacity-0 fade-slide-in">
+      {{imgix-image
+        fit="crop"
+        loadHandler=(action "imageReady")
+        shouldPrepare=shouldPrepare
+        image="images/hero-image-isometric.png"
+      }}
+    </div>
+  </div>
+</div>
