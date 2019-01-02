@@ -63,7 +63,7 @@ export default class GenericSlideComponent extends Component{
   }
 
   @restartableTask({maxConcurrency: 1})
-  _animate = function * () {
+  *_animate() {
     yield timeout(100);
     this.animate();
   }
@@ -82,7 +82,7 @@ export default class GenericSlideComponent extends Component{
   }
 
   @restartableTask({maxConcurrency: 1})
-  _setActive = function * () {
+  *_setActive() {
     yield timeout(350);
 
     this.prepare();

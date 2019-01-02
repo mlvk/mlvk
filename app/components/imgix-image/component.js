@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import ResizeAware from 'ember-resize/mixins/resize-aware';
-import {computed} from '@ember/object';
+import { computed } from '@ember/object';
 
 export default Component.extend(ResizeAware, {
 
@@ -33,17 +33,17 @@ export default Component.extend(ResizeAware, {
     'props',
     function(){
       const base = "https://mlvk.imgix.net/";
-      const image = this.get('image');
-      const width = this.get('width');
-      const height = this.get('height');
-      const fpX = this.get('fpX');
-      const fpY = this.get('fpY');
-      const fpZ = this.get('fpZ');
-      const fpDebug = this.get('fpDebug');
-      const quality = this.get('quality');
-      const fit = this.get('fit');
-      const crop = this.get('crop');
-      const props = this.get('props');
+      const image = this.image;
+      const width = this.width;
+      const height = this.height;
+      const fpX = this.fpX;
+      const fpY = this.fpY;
+      const fpZ = this.fpZ;
+      const fpDebug = this.fpDebug;
+      const quality = this.quality;
+      const fit = this.fit;
+      const crop = this.crop;
+      const props = this.props;
 
       let str = `${base}${image}?w=${width}&h=${height}&fp-x=${fpX}&fp-y=${fpY}&fp-z=${fpZ}&fp-debug=${fpDebug}&fit=${fit}&crop=${crop}&q=${quality}&auto=format&${props}`;
 
@@ -63,15 +63,15 @@ export default Component.extend(ResizeAware, {
   },
 
   didReceiveAttrs() {
-    if(this.get('shouldPrepare')){
+    if(this.shouldPrepare){
       this.set('load', true);
     }
   },
 
   actions: {
     onLoadHandler() {
-      if(this.get('loadHandler') !== undefined) {
-        this.get('loadHandler')();
+      if(this.loadHandler !== undefined) {
+        this.loadHandler();
       }
     }
   }

@@ -4,9 +4,7 @@ import { computed } from '@ember-decorators/object';
 import { notEmpty } from '@ember-decorators/object/computed';
 import { service } from '@ember-decorators/service';
 
-
 export default class SlideContainer extends Component {
-  @service scroller;
 
   slides = [];
   registerMe = this.registerFunc.bind(this);
@@ -103,20 +101,6 @@ export default class SlideContainer extends Component {
     if(nextSlide !== undefined){
       nextSlide.prepare();
     }
-  }
-
-  scrollToSlide(slide) {
-    if(slide) {
-      this.get("scroller").scrollToElement(slide.element);
-    }
-  }
-
-  moveToPreviousSlide() {
-    this.scrollToSlide(this.getSlideOffset(-1));
-  }
-
-  moveToNextSlide() {
-    this.scrollToSlide(this.getSlideOffset());
   }
 
   registerFunc(slide) {
